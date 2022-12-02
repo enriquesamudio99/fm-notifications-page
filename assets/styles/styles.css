@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+    /** FONT FAMILY **/
+    --ff-plus-jakarta: 'Plus Jakarta Sans', sans-serif;
+
+    /** COLORS **/
+    /* Primary */
+    --clr-red: hsl(1, 90%, 64%);
+    --clr-blue: hsl(219, 85%, 26%);
+    /* Neutral */
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-very-light-grayish-blue: hsl(210, 60%, 98%);
+    --clr-light-grayish-blue-one: hsl(211, 68%, 94%);
+    --clr-light-grayish-blue-two: hsl(205, 33%, 90%);
+    --clr-grayish-blue: hsl(219, 14%, 63%);
+    --clr-dark-grayish-blue: hsl(219, 12%, 42%);
+    --clr-very-dark-blue: hsl(224, 21%, 14%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html,
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--ff-plus-jakarta);
+    background-color: #F9FAFD;
+    font-weight: 500;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button { 
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.container {
+    width: min(calc(100% - 2rem), 45.625rem);
+    margin: 0 auto;
+}
+
+.notifications {
+    background-color: var(--clr-white);
+}
+
+@media (min-width: 768px) {
+    .notifications {
+        background-color: transparent;
+        margin: 3.9375rem 0 5.5625rem;
+    }
+}
+
+.notifications__container {
+    padding: 1.5rem 0 1.8125rem;
+}
+
+@media (min-width: 768px) {
+    .notifications__container {
+        background-color: var(--clr-white);
+        padding: 2.0625rem 1.875rem 0;
+        box-shadow: 0px 20px 60px rgba(73, 97, 168, 0.05);
+        border-radius: 15px;
+    }
+}
+
+.notifications__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notifications__title {
+    color: var(--clr-very-dark-blue);
+    font-weight: 800;
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 768px)  {
+    .notifications__title {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+}
+
+.notifications__badge {
+    margin-left: .5625rem;
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+    font-size: 1rem;
+    line-height: 1.25rem;
+    padding: .0625rem .6875rem .25rem;
+    border-radius: .375rem;
+}
+
+@media (min-width: 768px)  {
+    .notifications__badge {
+        margin-left: .6875rem;
+    }
+}
+
+.notifications__btn {
+    color: var(--clr-dark-grayish-blue);
+    font-size: .875rem;
+    line-height: 1.125rem;
+}
+
+@media (min-width: 768px) {
+    .notifications__btn {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+@media (hover: hover) {
+    .notifications__btn {
+        transition: color .3s ease;
+    }
+
+    .notifications__btn:hover {
+        color: var(--clr-blue);
+    }
+}
+
+.notifications__grid {
+    margin-top: 1.5rem;
+    display: grid;
+    row-gap: .625rem;
+}
+
+@media (min-width: 768px) {
+    .notifications__grid {
+        margin-top: 1.9375rem;
+    }
+}
+
+.notification {
+    background-color: transparent;
+    border-radius: .5rem;
+    padding: 1rem .75rem 1rem 1rem;
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .notification {
+        padding: 1.125rem 1.25rem 1.0625rem;
+    }
+}
+
+.notification--unread {
+    background-color: #F9FAFD;
+}
+
+.notification__img-container {
+    width: 39px;
+    height: 39px;
+    margin-right: .8125rem;
+}
+
+@media (min-width: 768px) {
+    .notification__img-container {
+        width: 45px;
+        height: 45px;
+        margin-right: 1.1875rem;
+    }
+}
+
+.notification__content {
+    flex: 1;
+}
+
+.notification__text {
+    font-size: .875rem;
+    line-height: 1.125rem;
+    color: var(--clr-dark-grayish-blue);
+}
+
+@media (min-width: 768px) {
+    .notification__text {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+.notification__name {
+    font-weight: 800;
+    color: var(--clr-very-dark-blue);
+    margin-right: .25rem;
+}
+
+@media (hover: hover) {
+    .notification__name {
+        transition: color .3s ease;
+    } 
+
+    .notification__name:hover {
+        color: var(--clr-blue);
+        cursor: pointer;
+    }
+}
+
+.notification__link {
+    margin-left: .25rem;
+    font-weight: 700;
+    color: var(--clr-dark-grayish-blue);
+}
+
+.notification__link--group {
+    color: var(--clr-blue);
+}
+
+@media (hover: hover) {
+    .notification__link {
+        transition: color .3s ease;
+    } 
+
+    .notification__link:hover {
+        color: var(--clr-blue);
+        cursor: pointer;
+    }
+}
+
+.notification--unread .notification__text {
+    position: relative;
+}
+
+.notification--unread .notification__text::after {
+    content: "";
+    position: absolute;
+    background-color: var(--clr-red);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: .375rem;
+    bottom: 4px;
+}
+
+.notification__time {
+    margin-top: .1875rem;
+    font-size: .875rem;
+    line-height: 1.125rem;
+    color: var(--clr-grayish-blue);
+}
+
+@media (min-width: 768px) {
+    .notification__time {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+.notification__msg-container {
+    margin-top: .75rem;
+    border: 1px solid #DDE7EE;
+    border-radius: 5px;
+    padding: .9375rem;
+    font-size: .875rem;
+    line-height: 1.125rem;
+    color: var(--clr-dark-grayish-blue);
+}
+
+@media (min-width: 768px) {
+    .notification__msg-container {
+        margin-top: .8125rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        padding: 1rem 1.1875rem 1.1875rem;
+    }
+}
+
+@media (hover: hover) {
+    .notification__msg-container {
+        transition: background-color .3s ease;
+    } 
+
+    .notification__msg-container:hover {
+        background-color: var(--clr-light-grayish-blue-two);
+        cursor: pointer;
+    }
+}
+
+.notification__picture-container {
+    width: 39px;
+    height: 39px;
+    margin-left: 1.6875rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .notification__picture-container {
+        width: 45px;
+        height: 45px;
+    }
+}

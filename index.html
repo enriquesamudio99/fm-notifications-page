@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Notifications Page</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+
+    <main class="main">
+        <div class="notifications">
+            <div class="notifications__container container">
+                <header class="notifications__header">
+                    <h1 class="notifications__title">Notifications<span class="notifications__badge">3</span></h1>
+                    <button type="button" class="notifications__btn">
+                        Mark all as read
+                    </button>
+                </header>
+                <div class="notifications__grid">
+                    <div class="notification notification--unread">
+                        <div class="notification__img-container">
+                            <img src="./assets/images/avatar-mark-webber.webp" class="notification__img" />
+                        </div>
+                        <div class="notification__content">
+                            <p class="notification__text"><a href="#" class="notification__name">Mark Webber</a> reacted to your recent post <a href="#" class="notification__link">My first tournament today!</a></p>
+                            <p class="notification__time">1m ago</p>
+                        </div>
+                    </div>
+                    <div class="notification notification--unread">
+                        <div class="notification__img-container">
+                            <img src="./assets/images/avatar-angela-gray.webp" class="notification__img" />
+                        </div>
+                        <div class="notification__content">
+                            <p class="notification__text"><a href="#" class="notification__name">Angela Gray</a> followed you</p>
+                            <p class="notification__time">5m ago</p>
+                        </div>
+                    </div>
+                    <div class="notification notification--unread">
+                        <div class="notification__img-container">
+                            <img src="./assets/images/avatar-jacob-thompson.webp" class="notification__img" />
+                        </div>
+                        <div class="notification__content">
+                            <p class="notification__text"><a href="#" class="notification__name">Jacob Thompson</a> has joined your group <a href="#" class="notification__link notification__link--group">Chess Club</a></p>
+                            <p class="notification__time">1 day ago</p>
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <div class="notification__img-container">
+                            <img src="./assets/images/avatar-rizky-hasanuddin.webp" class="notification__img" />
+                        </div>
+                        <div class="notification__content">
+                            <p class="notification__text"><a href="#" class="notification__name">Rizky Hasanuddin</a> sent you a private message</p>
+                            <p class="notification__time">5 days ago</p>
+                            <div class="notification__msg-container">
+                                <p class="notification__msg-text">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <div class="notification__img-container">
+                            <img src="./assets/images/avatar-kimberly-smith.webp" class="notification__img" />
+                        </div>
+                        <div class="notification__content">
+                            <p class="notification__text"><a href="#" class="notification__name">Kimberly Smith</a> commented on your picture</p>
+                            <p class="notification__time">1 week ago</p>
+                        </div>
+                        <div class="notification__picture-container">
+                            <img src="./assets/images/image-chess.webp" class="notification__picture" />
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <div class="notification__img-container">
+                            <img src="./assets/images/avatar-nathan-peterson.webp" class="notification__img" />
+                        </div>
+                        <div class="notification__content">
+                            <p class="notification__text"><a href="#" class="notification__name">Nathan Peterson</a> reacted to your recent post <a href="#" class="notification__link">5 end-game strategies to increase your win rate</a></p>
+                            <p class="notification__time">2 weeks ago</p>
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <div class="notification__img-container">
+                            <img src="./assets/images/avatar-anna-kim.webp" class="notification__img" />
+                        </div>
+                        <div class="notification__content">
+                            <p class="notification__text"><a href="#" class="notification__name">Anna Kim</a> left the group <a href="#" class="notification__link notification__link--group">Chess Club</a></p>
+                            <p class="notification__time">2 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./assets/scripts/app.js"></script>
+</body>
+</html>
